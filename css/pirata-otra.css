@@ -1,0 +1,49 @@
+/***********************************************************/
+/* Web del Romanticismo                                    */
+/* Hoja de estilo de pirata-otra                           */
+/* autora: Wachi Wachi                                     */
+/* versión: 1.0                                            */
+/* 9 de Noviembre de 2022                                  */
+/***********************************************************/
+
+/* ESTILO GENERAL                                          */
+
+@font-face {
+    font-family: escritura;
+    src: url('../fonts/FLllna2U.ttf');
+}
+
+@font-face {
+    font-family: titulos;
+    src: url('../fonts/Million\ Harmony.ttf');
+}
+
+body { font-family: escritura;
+    /*vamos a colocar una foto sola de fondo */
+    background-image: url('../imagenes/photo-background/Pirate-Background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120vh;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(43, 28, 0);
+}
+
+a:hover{color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+#poema {margin-left: 60%}
+
+.fa {font-family: 200% !important;}
+
+
+/* MEDIA QUERIS                                          */
+
+@media only screen and (width<=600px){
+    #poema {color:white;
+            margin-left: 20%;}
+}

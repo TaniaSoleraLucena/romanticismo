@@ -1,0 +1,110 @@
+/***********************************************************/
+/* Web del Romanticismo                                    */
+/* Hoja de estilo para index                           */
+/* autora: Wachi Wachi                                     */
+/* versión: 1.0                                            */
+/* 21 de Octubre de 2022                                   */
+/***********************************************************/
+
+/* ESTILO GENERAL                                          */
+
+@font-face {
+    font-family: titulos;
+    src: url('../fonts/Million\ Harmony.ttf');
+}
+
+@font-face {
+    font-family: texto;
+    src: url('../fonts/VioletSans-Regular.ttf');
+}
+
+body {font-family: texto;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+}
+
+* {box-sizing: border-box;}
+
+#wrapper {width: 80%;
+    background-color:white;
+    margin: auto;
+}
+
+/* hero sections  OPCION 1: FOTO + TEXTO**********************************/
+
+#hero {background-image: url(../imagenes/herosection/wanderer-above-the-sea-fog-friedrich.jpg);
+height: 100vh; /*para obligar que se vea mas alla del contenido */
+background-repeat: no-repeat; /* no la repitas */
+background-size: cover; /* cubre todo el fondo*/
+background-position: center; /*fija lo que hay en el medio */
+font-family: titulos;
+font-size: 2rem;
+padding-left: 5%;
+padding-top: 5%;
+}
+
+#titulo {background-color: rgba(255,255,255,0.5);
+width: 30%;
+padding: 2%;
+text-align: center;
+border-radius: 10%;
+}
+
+/* hero sections  OPCION 2: HAIKEI APP + POSITION + FROSTED GLASS********************************************/
+
+    #hero2 {background-image: url('../imagenes/backgrounds/fotito_trambolica.svg');
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position:relative; /* el hero se mueve de sitio */
+    }
+
+    #titulo2 {font-family: titulos;
+              font-size: 3rem;
+              background-color: rgba(255, 255, 255, 0.25);
+              width:50%;
+              text-align: center; /*podria haber sido u padding */
+
+              /* estas 4 reglas colocan una caja dentro de otra */
+              position: absolute; /* el titulo se fija DENTRO del hero */
+              top:50%;
+              left:50%;
+              transform: translate(-50%, -50%);
+
+              /*para el efecto fostd glass (fondo debe ser blanco y con opacidad por debajo de 0.5)*/
+
+              backdrop-filter: blur(5px);
+
+    }
+
+/* hero sections  OPCION 3: COLOR LISO + GETWAVES*******************************************/
+
+#hero3 {background-color:#00cba9;/* el mismo color que la ola */
+        height: 50vh;
+        position: relative;
+} 
+
+#titulo3 {font-family: titulos;
+          font-size: 4rem;
+          color:#fff;
+          position:absolute;
+          top: 50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          
+}
+
+#intro {background-color: black;}
+
+/* MEDIA QUERIS                                          */
+
+@media only screen and (width<= 900px){
+    #wrapper {width: 90%;}
+    #título {font-size: 2rem;
+            width: 50%;}
+}
+
+@media only screen and (width<= 600px){
+    #wrapper {width: 100%;}
+}

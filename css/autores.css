@@ -1,0 +1,80 @@
+/***********************************************************/
+/* Web del Romanticismo                                    */
+/* Hoja de estilo de autores                               */
+/* autora: Wachi Wachi                                     */
+/* versión: 1.0                                            */
+/* 21 de Octubre de 2022                                   */
+/***********************************************************/
+
+/* ESTILO GENERAL                                          */
+
+@font-face {
+    font-family: titulos;
+    src: url('../fonts/Million\ Harmony.ttf');
+}
+
+@font-face {
+    font-family: texto;
+    src: url('../fonts/VioletSans-Regular.ttf');
+}
+
+*{box-sizing:border-box} 
+
+body { margin:0;padding:0; /*para quitar el fondo en el movil*/
+       font-family: texto;
+       padding: 3%;
+       background-color: rgb(132, 175, 255);
+}
+
+#wrapper {
+    background-color: aliceblue;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+
+}
+
+#limpiar {clear:both}
+
+h1,h2,h3 {
+        font-family: titulos;
+        text-align: center;
+        margin:auto;
+        margin-bottom: 50px;
+        border-bottom: 2px solid aqua;
+        width: 75%;
+
+}
+
+#espronceda {
+    float:left; /* para que la imagen tenga el texto alrededor */
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width:25%;
+}
+p{
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(94, 94, 255);
+}
+/* pseudoclase como selector :hover (ratón encima) */
+a:hover{color: aqua;
+    text-decoration: underline;
+}
+
+
+/****** MEDIA QUERIES ***************************************/
+@media only screen and (width<=850px){
+    #espronceda {width:50%;
+    margin:0%;
+    }
+}
+
+@media only screen and (width<=500px){
+    #espronceda{width:100%;}
+    #wrapper {width:100%}
+}
